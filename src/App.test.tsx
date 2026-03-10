@@ -26,6 +26,7 @@ describe('App', () => {
     render(<App />)
     const incrementButton = screen.getByText(/Increment/i)
     const resetButton = screen.getByText(/Reset/i)
+    const incrementBytwo = screen.getByText(/double/i)
     
     // Increment first
     fireEvent.click(incrementButton)
@@ -37,5 +38,10 @@ describe('App', () => {
     fireEvent.click(resetButton)
     countDisplay = screen.getByTestId('count-display')
     expect(countDisplay).toHaveTextContent('Count is: 0')
+
+    // increment +2 
+    fireEvent.click(incrementBytwo)
+    let countDisplaydouble = screen.getByTestId('count-display')
+    expect(countDisplaydouble).toHaveTextContent('Count is: 2')
   })
 })

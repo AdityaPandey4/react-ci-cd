@@ -18,6 +18,9 @@ function App() {
           <button onClick={() => setCount(0)}>
             Reset
           </button>
+          <button onClick = {()=> setCount((count)=>count + 2)}>
+            double
+          </button>
         </div>
       </div>
     </div>
