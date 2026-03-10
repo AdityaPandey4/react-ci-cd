@@ -30,6 +30,8 @@ jobs:
         with:
           name: react-build
           path: dist
+      - name: debug steps
+        run: ls -R
 
 
   deploy:
@@ -43,6 +45,8 @@ jobs:
         with:
           name: react-build
           path: dist
+      - name: debug
+        run: ls -R 
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
